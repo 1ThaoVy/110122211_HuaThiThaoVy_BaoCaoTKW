@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>TRANG WEB ĐỌC TRUYỆN ONLINE</title>
+        <!--<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />-->
+        <link rel="icon" type="image/x-icon" href="assets/img/logoweb.png"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->       
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-upper text-primary mb-3">HOAN NGHÊNH MỌI NGƯỜI ĐÃ GHÉ THĂM</span>
+                <div class="d-flex justify-content-center mb-3"><img src="assets/img/logo.png" class="thu-nho-anh"></div>
+                <span class="site-heading-lower">NGÔI NHÀ NHỎ</span>
+            </h1>
+        </header>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Chào mừng!</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">Trang Chủ</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="motdieunho.html">Một điều nho nhỏ</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="cacmautruyen.html">Các mẫu truyện</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="khac.html">Khác</a></li>
+                    </ul>
+                </div>
+                <a href="https://docs.google.com/spreadsheets/d/1wu0i1Yv-kdnztFYdn9dE6N5Q-FHL2z375UOFP0DqLIM/edit?resourcekey#gid=966023894">Link GoogleSheet</a>
+            </div>
+        </nav>
+        <section class="page-section about-heading">
+            <div class="container">
+                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="assets/img/about.jpg" alt="..." />
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <h2 class="section-heading mb-4">
+                                    <span class="section-heading-lower">LƯU Ý</span>
+                                </h2>
+                                <p>Chào mừng mọi người đã đến với NGÔI NHÀ NHỎ</p>
+                                <p>Đây là trang cá nhân của mình. Upload những mẫu truyện mà mình yêu thích và có rất nhiều thể loại đa dạng để mọi người có thể lựa chọn. Truyện trong trang này tất cả đều là truyện boylove, vì vậy nếu bạn không thích thể loại này vui lòng click back.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--form phản hồi-->
+        <div class="about-heading-content">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                       <form id="data-form">
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-upper">Gửi phản hồi cho mình ở đây</span>
+                            </h2>
+                            <input class="form-control form-control-lg" id="hoten" type="text" placeholder="Họ và tên" data-sb-validations="required,hoten" />
+                            <br><br>
+                            <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Email" data-sb-validations="required,email" />
+                            <br><br>
+                            <input class="form-control form-control-lg" id="phanhoi" type="text" placeholder="Phản hồi ở đây" data-sb-validations="required,phanhoi" />
+                            <br><br>
+                            <button type="submit" id="submitButton">Nhấn vào đây nè!</button>                    
+                        </form>
+                        <br>
+                        <a href="https://docs.google.com/spreadsheets/d/1wu0i1Yv-kdnztFYdn9dE6N5Q-FHL2z375UOFP0DqLIM/edit?resourcekey#gid=966023894">Link GoogleSheet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const hoten = document.getElementById("hoten");
+                const email = document.getElementById("emailAddress");
+                const phanhoi = document.getElementById("phanhoi");
+                const submit = document.getElementById("submitButton");
+                submit.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const data = {
+                        name: hoten.value,
+                        email: email.value,
+                        feedback: phanhoi.value,
+                    };
+                    postGoogle(data);
+                });
+                async function postGoogle(data) {
+                    const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSdKzg7c_WcX6KLWjzKiN-5_TwEvQhBbn23kfS6166k7aQffrQ/formResponse";
+                    const formData = new FormData();
+                    formData.append("entry.1884265043", data.name);
+                    formData.append("entry.513669972", data.email);
+                    formData.append("entry.1086259325", data.feedback);
+                    await fetch(formURL, {
+                        method: "POST",
+                        body: formData,
+                    }
+                    );
+                }
+            }
+            );
+        </script>
+        
+        <footer class="footer text-faded text-center py-5">
+            <div class="container"><p class="m-0 small">Copyright &copy; This Is My House 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
